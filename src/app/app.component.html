@@ -1,0 +1,22 @@
+<!-- header -->
+<app-header (click)="toggle()" ></app-header>
+<!-- sidenav -->
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" [opened]="sidebarOpened">
+<!-- sidebar -->
+<app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+<!-- dashboard -->
+  <!-- user requested pages -->
+<router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+  
+
+  <!-- divider -->
+  <mat-divider></mat-divider>
+
+<!-- footer -->
+<app-footer></app-footer>
